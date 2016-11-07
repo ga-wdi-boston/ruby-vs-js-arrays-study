@@ -7,11 +7,11 @@ Include differences in return value and chain-ablilty
 
 | method                  | Differences | Similarities |
 |-------------------------|-------------|--------------|
-| `push`                  |             |              |
-| `<<` (compare to`push`) |             |              |
-| `pop`                   |             |              |
-| `unshift`               |             |              |
-| `shift`                 |             |              |
+| `push`                  |  doesn't need ())           | puts to end             |
+| `<<` (compare to`push`) | << only for one arguement            | puts to the end             |
+| `pop`                   |  doesn't need ()           | removes the end element             |
+| `unshift`               |doesn't need ()|Puts arguments to the beginning|
+| `shift`                 |ruby shift only removes first item | removes item in a list|
 
 
 ## Repeat Lab for JS ##
@@ -20,6 +20,7 @@ Working in [bin/study.js](bin/study.js) (storing the results of any access in `t
 for display):
 
 -   Assign `20` to the element at `length+1`.
+- 
 -   Access the 3rd element from the end of an array length of 5.
 -   Access element 9 for a length of 5 elements.
 -   Assign [-12, -49] to the range starting from 5th element from the end,
