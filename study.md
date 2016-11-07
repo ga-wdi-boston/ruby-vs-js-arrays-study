@@ -7,11 +7,11 @@ Include differences in return value and chain-ablilty
 
 | method                  | Differences | Similarities |
 |-------------------------|-------------|--------------|
-| `push`                  |             |              |
-| `<<` (compare to`push`) |             |              |
-| `pop`                   |             |              |
-| `unshift`               |             |              |
-| `shift`                 |             |              |
+| `push`                  |JS - returns the length of the new array.  Ruby - returns the array itself. | can append one or more values to an array |
+| `<<` (compare to`push`) |Ruby only. Append one value at a time | Can be chained to append multiple values. Returns the array itself. |
+| `pop`                   |JS - Returns undefined if array is empty. Ruby - Returns nil if the array is empty. Ruby - Can pass a number to pop and it will remove/return that number of values from end of array.| Removes last element from array and returns that element|
+| `unshift`               |JS - Returns new length of array. Ruby - Returns the new array itself.| Adds one or more elements to the beginning of the array|
+| `shift`                 |JS - Returns undefined for empty array. Ruby - Returns nil for empty array. Can remove more than one element. |Removes the first element of the array and returns that element.|
 
 
 ## Repeat Lab for JS ##
