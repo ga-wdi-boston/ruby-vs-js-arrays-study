@@ -3,15 +3,21 @@
 Briefly describe the similarities and differences between `push`, `pop`,
 `unshift`, `shift` in Ruby and JavaScript.
 
+'push' - Ruby returns the array while JS does not.Both push the new item to the end of an array
+'pop'  - Both Ruby & JS remove the last item in anarray and return it
+'unshift' - In both Ruby & JS it prepends the object to the front of the array.
+'shift' - In both Ruby & JS it removes the first item of an array.  Ruby returns it
+
+
 Include differences in return value and chain-ablilty
 
-| method                  | Differences | Similarities |
-|-------------------------|-------------|--------------|
-| `push`                  |             |              |
-| `<<` (compare to`push`) |             |              |
-| `pop`                   |             |              |
-| `unshift`               |             |              |
-| `shift`                 |             |              |
+| method                  | Differences                              | Similarities      |
+|-------------------------|-------------                             |--------------     |
+| `push`                  | Ruby returns                             |                   |
+| `<<` (compare to`push`) | Cannot handle more than 1 item at a time |                   |
+| `pop`                   |                                          |Ruby & JS Returns  |
+| `unshift`               | Ruby returns                             |                   |
+| `shift`                 | Ruby returns                             |                   |
 
 
 ## Repeat Lab for JS ##
