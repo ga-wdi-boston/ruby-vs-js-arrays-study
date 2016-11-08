@@ -5,13 +5,28 @@ Briefly describe the similarities and differences between `push`, `pop`,
 
 Include differences in return value and chain-ablilty
 
-| method                  | Differences | Similarities |
-|-------------------------|-------------|--------------|
-| `push`                  |             |              |
-| `<<` (compare to`push`) |             |              |
-| `pop`                   |             |              |
-| `unshift`               |             |              |
-| `shift`                 |             |              |
+| method
+|-------------------------|--------------------|-----------------------|
+| `push`
+      Differences: no () or ; in ruby.
+      Similarities: takes multiple arguments. Both return newly modified array.
+          Chain-ability.
+| `<<` (compare to`push`)
+      Differences: An equivalent shortend version of push does not exist in JS.
+      Similarties: Its like a push function in every way(as described above)
+          except it doesnt multiple arguments.
+| `pop`
+      Differences: no () or ; in ruby. You can specify multiple entries to be
+          popped in ruby.
+      Similarities: In both, pop removes the last entry(s). Chain-able.
+| `unshift`
+      Differences: no () or ; in ruby. JS returns the new length.
+      Similarities: Add elements at the beginning of arrays.
+
+| `shift`
+      Differences: no () or ; in ruby. Returns array in ruby, returns removed
+      element in JS.
+      Similarities: no chaining.
 
 
 ## Repeat Lab for JS ##
