@@ -13,6 +13,28 @@ Include differences in return value and chain-ablilty
 | `unshift`               |             |              |
 | `shift`                 |             |              |
 
+push - differences
+In Javascript, push returns the length of the array.
+In Ruby, it returns the array, so several appends may be chanined together.
+  similarities -
+In both JS and Ruby, .push appends a value to the end of the array.
+
+
+pop - differences
+In Javascript, it deletes the last element in the array and returns the deleted
+element.
+In Ruby, it removes the last element in the array and returns the array
+  similarities -
+In both Ruby and JS, pop deletes the last element from the array.
+
+unshift - differences
+In Ruby, it will add a new item to the beginning of the array.
+In JS, it adds one or more elements of the array and returns the new length.
+
+shift - difference
+In Ruby - to retreive and remove the first item of the array, we use shift.
+In JS, shift is like pop, except it works for the beginning of the array. It
+pulls the first elements off and returns it.
 
 ## Repeat Lab for JS ##
 
