@@ -13,6 +13,18 @@ Include differences in return value and chain-ablilty
 | `unshift`               |             |              |
 | `shift`                 |             |              |
 
+```txt
+The similairties between the push method is that it will only add an item onto the end of an array. In regards to push and javascript, you can add multiple elements to an array i.e. array.push(6, 7, 8). In Ruby you can do the same thing but you do not need to use parentheses.
+
+The '<<' functionality is not available in JS when it comes to arrays. You use it in Ruby but you can only add elements one at a time unles you chain the '<<'
+
+The 'pop' functionality removes elements from the ends of arrays in both languages. In Ruby you can specify the amount of elements you want to remove. In JS you can only remove the last element from the array as opposed to multiple elements.
+
+In Ruby, 'unshift' will add  elements to the beginning of the array. It enables you to add more than one element at a time. It is the same in JS but parentheses are required.
+
+The 'shift' method will report and remove the first element in an array in Ruby. It does not have chaining capabilities so only the first element can be removed. In Javascript it has the same functionality but it requires parantheses to be used
+```
+
 
 ## Repeat Lab for JS ##
 
