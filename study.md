@@ -7,11 +7,21 @@ Include differences in return value and chain-ablilty
 
 | method                  | Differences | Similarities |
 |-------------------------|-------------|--------------|
-| `push`                  |             |              |
-| `<<` (compare to`push`) |             |              |
-| `pop`                   |             |              |
-| `unshift`               |             |              |
-| `shift`                 |             |              |
+| `push`                  | ruby returns| both mutate
+                            array, js   |
+                            returns     |
+                            length
+| `<<` (compare to`push`) | << can only
+                            accept one
+                            value, push
+                          | can be chained             |
+| `pop`                   | syntax -- no| both return the last value, both
+                            () on ruby     chain the return only and mutat
+| `unshift`               | js returns length,
+                          | ruby returns array             |
+| `shift`                 | ruby can      both return removed values
+                            shift more
+                            than one space
 
 
 ## Repeat Lab for JS ##
