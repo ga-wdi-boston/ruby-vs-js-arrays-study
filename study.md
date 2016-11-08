@@ -13,6 +13,47 @@ Include differences in return value and chain-ablilty
 | `unshift`               |             |              |
 | `shift`                 |             |              |
 
+'push'
+  similarities
+    - adds new objects to array in similar manner whether in JS or Ruby
+    - both return array with new objects added to end
+    - both can chain
+    - both accept multiple arguments
+  differences
+    - Ruby doesn't require semicolon at the end of push statement
+
+'<<'
+  similarities
+    - shovel operator acts like push in JS
+    - returns array with new object added to end
+  differences
+    - doesn't exist in JS
+    - different from push in Ruby because only accepts one argument, not multiple
+
+'pop'
+  similarities
+    - both work on arrays
+  differences
+    - Ruby method removes the last element from self and returns it, or returns an array of the last n elements if a number n is given
+    - JS method just removes last element from array
+
+'unshift'
+  similarities
+    - both work on arrays
+    - both take in arguments
+    - both add items
+  differences
+    - Ruby method prepends the provided value to the front of the array, moving all other elements up one
+    - JS method adds new items to the beginning of an array, and returns the new length
+
+'shift'
+  similarities
+    - both work on arrays
+    - both remove items
+  differences
+    - Ruby method removes the first element from the array and returns it
+    - JS method removes the first item of an array, and returns that item
+
 
 ## Repeat Lab for JS ##
 
