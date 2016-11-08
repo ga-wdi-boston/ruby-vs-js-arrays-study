@@ -7,11 +7,11 @@ Include differences in return value and chain-ablilty
 
 | method                  | Differences | Similarities |
 |-------------------------|-------------|--------------|
-| `push`                  |             |              |
-| `<<` (compare to`push`) |             |              |
-| `pop`                   |             |              |
-| `unshift`               |             |              |
-| `shift`                 |             |              |
+| `push`                  |  Essentially the same           | both add element to end of array and return that element.  Both modify element in place.             |
+| `<<` (compare to`push`) |  Returns the array in ruby (allowing for chainability.)           |      Push in javascript does not return array.        |
+| `pop`                   |             | Essentially te same.             |
+| `unshift`               |In JS, unshift returns length of the array.  In ruby returns the array (allowing for chainability.)             |  Both add argument to beginning of array.            |
+| `shift`                 |             |  Both remove the first value from the array and return the value            |
 
 
 ## Repeat Lab for JS ##
