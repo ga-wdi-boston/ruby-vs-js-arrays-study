@@ -23,13 +23,19 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+.push("somethingHere")
+both can do this with "" around or not
+adds elements
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+use of ;
+ruby can use << instead of .push
+javascript can only push one element at a time
+ruby can push multiple elements
+
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +46,17 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+both do the same thing to the array if no parameter
+returns the element to the console
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+ruby arr.pop removes an element from array
+javscript needs .pop(); and can use popped to view popped item
+for ruby .pop(#) pops the number of elements put inside () from the right
+for javascript, it still just pops off the last element, no matter what number is inside the ()
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +67,15 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+without parametes they do the same thing
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+with parameters .shift(#) will remove the number of elements from the array
+javascript will still only affect one element from the array
+
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +86,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+both add to left side of the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+ruby can use ( , ) to change the array
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,7 +105,9 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+numbers_squared = numbers.map{|numbers| numbers ** 2}
+
+# ruby needs .method{|i| i (whatver you're doing to i)}
 ```
 
 JavaScript:
@@ -101,7 +115,11 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+const squares = numbers.map(number => {
+  return number ** 2;
+});
+
+// .method (argument =>(or shorthand for function) then return (rules for manipulating))
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +132,8 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.reduce{|sum, x| sum*x }
+# does not need parenthesis
 ```
 
 JavaScript:
@@ -122,7 +141,8 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+array.reduce((x,y) => x*y)
+//use fat arrow shorthand
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +155,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+filtered_numbers = number.select{ |number| number.odd? }
 ```
 
 JavaScript:
@@ -143,5 +163,5 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+let filtered = numbers.filter(numbers => numbers % 2 !== 0);
 ```
