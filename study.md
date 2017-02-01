@@ -23,13 +23,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
-```
+you can use '.push' for both and specify the index and element```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+in ruby, you can use also do name_of_array[4] = 'max'  ||   name_of_array.push[4] = 'max'
+js would be nameOfArray.push(4, 'max');
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +40,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+both use '.pop'
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+you have to use write '.pop();' for js but ruby you don't, just .pop is fine.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +57,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+both use '.shift'
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+you have to use write '.shift();' for js but ruby you don't: just .shift is fine.
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,14 +74,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+both use '.unshift'
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
-```
+the only difference is that js needs ';' at the end.'```
 
 ## Array#map vs. Array.prototype.map()
 
@@ -93,7 +92,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map { |i| o * o }
 ```
 
 JavaScript:
@@ -101,7 +100,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+array.map((x) => x * x)
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +113,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.inject(0) { |m, o| m + o }
 ```
 
 JavaScript:
@@ -122,7 +121,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+array.reduce((m, o) => m + o, 0)
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +134,19 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.select { |o| o > 1 }
+
+the below code is for me for a later reference:
+def create_1_to_10_odd_array
+    array = [1]
+    i = 3
+    while i < 10
+        array.push i
+        i += 2
+    end
+
+    array
+end
 ```
 
 JavaScript:
@@ -143,5 +154,5 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+array.filter((x) => x % 2 != 0)
 ```
