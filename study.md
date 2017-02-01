@@ -23,13 +23,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+<!-- New elements are added to the end of the array. -->
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+<!-- To find index of elements in js indexOf is used; instead, in ruby index. -->
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +40,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+<!-- Delete the last element in the array -->
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+<!-- In ruby .pop()accepts arguments which indicate the number of elements I want to delete from the array.Deletion will always start from last element of the array.-->
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +57,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+<!-- Removes the first element from the array. -->
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+<!-- same as pop it accepts arguments to indicate number of elements to remove. -->
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +74,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+<!-- Add elements to the beginning of the array -->
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+<!-- In JS when I unshift elements to an array, I get in return the array with all the elements in JS we do not get the complete array, just the number. -->
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,7 +93,9 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+# array.map do |num|
+        # num**2
+  # end
 ```
 
 JavaScript:
@@ -101,7 +103,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+// let square = array.map(number => number**2);
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +116,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+# product= array.reduce(:*)
 ```
 
 JavaScript:
@@ -122,7 +124,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+// let product = array.reduce((number,num)=>number*num);
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +137,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+# array.select(&:odd?)
 ```
 
 JavaScript:
@@ -143,5 +145,6 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+// let oddNumbers= array.filter(num =>
+// number % 2 === 1);
 ```
