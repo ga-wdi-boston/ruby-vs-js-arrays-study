@@ -23,13 +23,14 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both of them are used with . notation after the array and in both laguages we can use parantheses
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In ruby paranthes is not a must. In javasctipt if we would like to pass a data one at a itme eac time we need to use .() but in ruby
+array.push().push is also possible.
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +41,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both of them are poping the last item of the array nothing is passed in the array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby pops as much as itmes from the end array that we pass in the parantheses
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +58,14 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both languages it pops the first item of the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby pops as much as itmes from the begining of array that we pass in the
+parantheses
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +76,14 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both languages the itmes in the parantheses will be pushed to begining of the
+array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+No fucnitonal differences.
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,7 +96,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map! {|x| x*x }
 ```
 
 JavaScript:
@@ -101,7 +104,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+let square = array.map(function(n){
+  return n * n
+})
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +119,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+total = (1..10)reduce(:+)
 ```
 
 JavaScript:
@@ -122,7 +127,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+let total = array.reduce(function(a,b){
+  return a + b
+})
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +142,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+odd = array.select  {|x| x.odd?}
 ```
 
 JavaScript:
@@ -143,5 +150,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+odd = array.filter(function(x){
+  return x % 2 === 1
+})
 ```
