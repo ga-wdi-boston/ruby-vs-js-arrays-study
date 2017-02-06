@@ -23,13 +23,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+For both Ruby and JS, the push method is used to add values to the end of an existing array.  In addition, they both modify an existing array rather than create a new one.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+The only difference I was able to determine is the syntax.  While JS requires a variable be declared (with let) before being applied (and ending with a semicolon), they code is virtually the same.
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +40,19 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+For both Ruby and JS, the pop method removes an item from the end of an existing array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+There is one significant difference between the pop method for JS and Ruby
+
+Sample Ruby Code (for reference):
+a = [2, 3, 4]
+a.pop(2)
+
+For Ruby, the value included within the parentheses indicates how many items to remove.  The example above would return the array [3, 4].  In JS, however, applying the pop method removes a single element of an array and does not work the same way.  For the example above, the JS method a.pop() would only remove the very last item (i.e. it does not take arguments).
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,14 +63,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+For both the JS and Ruby shift method, the first element of an array is removed and returned.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
-```
+The difference is that JS does not take arguments for the number of elements that is to be removed from the start of an array.  Ruby, on the other hand, allows you to specify the number of elements to be removed from the beginning of the array.
 
 ## Array#unshift vs. Array.prototype.unshift()
 
@@ -74,13 +79,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+For both Ruby and JS, the unshift method adds one or more elements to the beginning of an array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+I was unable to determine any significant differences for the unshift method with JS and Ruby (aside from syntax).
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,7 +98,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+new_array = array.map { |number| number * number}
 ```
 
 JavaScript:
@@ -101,7 +106,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+let new_array = array.map(function(x) {
+  return x * x;
+});
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +121,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.reduce(:*)
 ```
 
 JavaScript:
@@ -122,7 +129,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+array.reduce(function(a, b) {
+  return a * b;
+});
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +144,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.select { |numbers| num.odd? }
 ```
 
 JavaScript:
@@ -143,5 +152,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+let divisibleByTwo = function (number) {
+  return number % 2 !== 0;
+};
+
+let oddNum = array.filter(divisibleByTwo);
 ```
