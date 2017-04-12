@@ -23,13 +23,21 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+array = [] means the same thing in Ruby or Javascript.  It's an empty array.
+array[1] = 'b' means the same thing in Ruby or Javascript.  It's referring to the
+second item in the array (which is 'b')
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby uses the shovel to add something to the array
+array << "a"
+Javascript uses the push method
+array.push("a")
+
+Ruby uses array[-3] to find the item located in the third position from the end of the array.
+With Javascript, you'd use something like array_fragment[array_fragment.length -3]
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +48,17 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+they both use the .pop method
+array.pop() removes the last item in the array (Javascript)
+array.pop removes the last item in the array (Ruby)
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+You can pop more than one item using Ruby.  If you want to remove the last 5
+items, type:
+array.pop(5)
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +69,14 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+They both remove the first item in an array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby:  array.shift
+Javascript:  array.shift()    needs parenthesis
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +87,14 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+array.unshift("a")  Ruby adds specified items to the beginning of the array
+array.unshift("a")  Javascript adds specified items to the beginning of the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+I don't see any differences!
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,7 +107,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map { |num| num**2 }
 ```
 
 JavaScript:
@@ -101,7 +115,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+results = array.map(function (arrayCell) {
+    Return arrayCell ** 2}
+)
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +130,9 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+def array(array)
+  array.reduce(0) {|sum, num| sum + num }
+end
 ```
 
 JavaScript:
@@ -122,6 +140,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].reduce(
+  function(total, num){ return total + num }
+  , 0)
 // your answer here
 ```
 
@@ -135,7 +156,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+arr_odd=[]
 ```
 
 JavaScript:
@@ -143,5 +164,10 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+for (let i = 0; i < arr.length; i++) {
+    if ((arr[i] % 2) == 1) {
+        arr.splice(i, 1);
+        i = i-1;
+    }
+}
 ```
