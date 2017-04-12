@@ -23,13 +23,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+They both use brackets to house them and you can use the same keyword to add them to the end of an array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby will return the new array automatically.
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +40,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+They both use brackets to house them and you can use the same keyword to remove the last item of an array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby will display the deleted item automatically.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,7 +57,7 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both function the same way in that they remove the first item(s) of an array.
 ```
 
 Differences:
@@ -74,7 +74,7 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both function the same way in that they add a new item at the beginning of an array.
 ```
 
 Differences:
@@ -101,7 +101,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+// Will need to revisit these JS callback functions.
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
