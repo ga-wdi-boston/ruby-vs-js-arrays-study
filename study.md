@@ -23,13 +23,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both Ruby and Javascript, the push method will append an element (or multiple elements) to the end of an array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In Ruby, << will only accept a single argument. The push method, however, will accept multiple arguments.
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,30 +40,29 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both languages, `pop` will let you remove elements from an array. If you type array.pop(), the last element will be removed from the array in both languages.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In Ruby, you can specify how many elements you'd like to remove from the array. If you run array.pop(1, 2), Ruby will remove two elements starting from index 1. In Javascript, .pop() will just remove the last element from the array. You cannot specify how many elements get removed.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
 
-What are the similarities and differences between Ruby's and JavaScript's
-`shift` Array methods?
+What are the similarities and differences between Ruby's and JavaScript's `shift` Array methods?
 
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both methods, `shift` will take the first element of an array and return it in the console.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In Ruby, that first element will be returned as an array. In Javascript, that first element will be returned as an integer or an array.
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +73,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both languages, the unshift method will append the input to the beginning of the array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In Javascript, the unshift method will first return the length of the new array. You have to call the array again to see the new value appended to the beginning of the array. In Ruby, the unshift method will immediately return the new array with the given value appended to the front.
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -94,6 +93,7 @@ Ruby:
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # your answer here
+array.map { |n| n * n }
 ```
 
 JavaScript:
@@ -102,6 +102,7 @@ JavaScript:
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // your answer here
+array.map(e => e * e)
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -113,16 +114,14 @@ Ruby:
 
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# your answer here
+array.reduce(1, :*)
 ```
 
 JavaScript:
 
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// your answer here
+array.reduce ((e, i) => e * i)
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -134,14 +133,12 @@ Ruby:
 
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# your answer here
+array.select { |n| n if n % 2 != 0 }
 ```
 
 JavaScript:
 
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// your answer here
+array.filter(e => e % 2 !== 0)
 ```
