@@ -23,13 +23,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+1. Both methods push elements to the end of the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+1.
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +40,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+1. Both methods remove elements from the end of the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+1.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,7 +57,7 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+1. Both methods remove elements from the beginning of the array
 ```
 
 Differences:
@@ -74,7 +74,7 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+1. Both methods add elements to the begging of the array.
 ```
 
 Differences:
@@ -93,7 +93,8 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+ squares = array.select(|number| number ** 2)
+
 ```
 
 JavaScript:
@@ -101,7 +102,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+const squares = array.map(array => {return array **2 })
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +115,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+produce = array.reduce(1) {|accumlator, number| accumlator * number}
 ```
 
 JavaScript:
@@ -122,7 +123,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+const produce = array.reduce (accumlator, number) => accumlator * number, 1)
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +136,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+filteredArray = array.select {|number| number.odd?}
 ```
 
 JavaScript:
@@ -143,5 +144,5 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+const fiteredArray = array.filter(array => array % 2 === 1)
 ```
