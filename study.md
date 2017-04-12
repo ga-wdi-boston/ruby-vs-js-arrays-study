@@ -23,13 +23,14 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both cases, the push funciton appends to the end of the exiting array.
+In addition, you can push multiple things onto the end of the array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In Ruby, the push function can be chained, i.e. [1,2,3].push(4).push(5)
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +41,15 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both methods remove the final element of the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Javascript's pop method takes a parameter and returns the array up to that point.
+For example, [1,2,3,4].pop(2) returns the array of the values greater than position 2, which is 4.
+In Ruby, [1,2,3,4].pop(2) returns an array of the elements greater than element 2 (2), which is [3,4]
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +60,14 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both javascript and Ruby, shift removes the first element of the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In Ruby's shift method, you can pass a parameter that shifts the array a certain number, i.e.
+[1,2,3,4].shift(3) = [1,2,3]
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +78,14 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both cases, the unshift adds an element to the beginning of the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In Javascript, the method unshift returns the length of the new array while
+in Ruby it returns the array.
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,15 +98,19 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map {|x| x ** 2}
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// your answer here
+let r = array.map(function(x) {
+  return x * x
+  }
+)
+
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +123,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.reduce(:*)
 ```
 
 JavaScript:
@@ -122,7 +131,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+array.reduce(function(acc, val) {
+  return acc * val
+})
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +146,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.select { |num| num.odd? }
 ```
 
 JavaScript:
@@ -143,5 +154,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+array.filter(function(n){
+  if (n % 2 === 1) {
+    return n
+  }
+})
 ```
