@@ -23,13 +23,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both insert an object to the end of an array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Syntax for Ruby can be written in shorthand as <<. For JavaScript the method is called using .push()
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +40,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both remove the last element in an array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+When using pop method in Ruby you can enter an argument to specify which element to remove wheras JavaScript will always remove the last element.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +57,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both will remove the first element in an array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Similar to pop, when using shift in Ruby you can include an argument to specify element(s) relative to the first element whereas JavaScript will always rmeove the first element.
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +74,25 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both add elements to the beginning of an array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+JavaScript's unshift method returns the length of the updated array:
+> array = [1,2,3,4]
+[ 1, 2, 3, 4 ]
+> array.unshift(9,8)
+6
+> array
+[ 9, 8, 1, 2, 3, 4 ]
+
+Ruby's unshift method returns the updated array:
+[1] pry(main)> array = [1,2,3,4]
+=> [1, 2, 3, 4]
+[2] pry(main)> array.unshift(9,8)
+=> [9, 8, 1, 2, 3, 4]
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,7 +105,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+newArray = array.map { |num| num ** 2}
 ```
 
 JavaScript:
@@ -101,7 +113,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+let newArray = array.map(function(num){
+  num = num ** 2
+})
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
