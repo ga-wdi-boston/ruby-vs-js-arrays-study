@@ -23,14 +23,14 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+They both use index of the array. Also, both are created using
+literals as constructors.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
-```
+Ruby uses the >> notation to take one argument and places it on the end of array.```
 
 ## Array#pop vs. Array.prototype.pop()
 
@@ -40,14 +40,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
-```
+Both remove the last element of an array and return it.```
 
 Differences:
 
 ```md
-<!-- your answer here -->
-```
+Ruby can work from the last element in, and also return nil if
+empty as opposed to [-1]```
 
 ## Array#shift vs. Array.prototype.shift()
 
@@ -57,8 +56,8 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
-```
+Both take the first element of an array and return it, shifting
+the remaining items to the left. ```
 
 Differences:
 
@@ -74,8 +73,7 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
-```
+They both place an element at the start of an array.```
 
 Differences:
 
@@ -93,7 +91,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map {|x| x *x}
 ```
 
 JavaScript:
@@ -101,7 +99,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+array.map(function (x) {return x*x})
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -122,7 +120,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+> array.reduce(function(x,y){return x*y})
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +133,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.select { |num|  num.odd? }
 ```
 
 JavaScript:
@@ -143,5 +141,5 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
-```
+array.filter((function(x){ return x%2 !== 0})
+)```
