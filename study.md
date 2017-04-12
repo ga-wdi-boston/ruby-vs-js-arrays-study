@@ -23,13 +23,16 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+<!-- The push methods are similar in JS and Ruby in the way the method is called
+(.push). -->
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+<!-- The push methods are different in JS and Ruby in that no parens are needed
+in Ruby.
+ -->
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +43,15 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+<!-- The pop methods are similar in JS and Ruby in the way the method is called
+(.pop). -->
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+<!-- The pop methods are different in JS and Ruby in that no parens are needed
+in Ruby. -->
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -74,13 +79,14 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+<!-- they both remove the 0th element from an array and shift the rest of the
+elements-->
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+<!-- JS returns undefined if the array is empty when shifting.  Ruby returns nil. -->
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -92,16 +98,21 @@ Ruby:
 
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# your answer here
+square_array = array.map { |n| n ** 2 }
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+function PowerTwo(element) {
+    let squareVal = Math.pow(element)
+    return element*element
+}
 
-// your answer here
+squareArray = array.map(PowerTwo)
+
+console.log(squareArray)
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,15 +125,21 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+# no time to complete this
+
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+// I didn't get this.  My brain is shot.  way over on time limit.
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let product = array.reduce(function (prev, curr) {
+  return prev * curr
+}, 0)
+
+console.log(product)
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -133,9 +150,9 @@ new array consisting of the odd numbers of the existing array.
 Ruby:
 
 ```ruby
-array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+
+# run out of time
 ```
 
 JavaScript:
@@ -143,5 +160,5 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+// I've run out of time
 ```
