@@ -23,13 +23,14 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+They both are used to add objects to the end of an array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+if you save a push argument in JS to a variable it returns the length of the new return
+Ruby return's the new updated array and allows for chaining of pushes
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +41,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+Removes the last item from an array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+JS pop does not take any arguments. Ruby allows you pass an argument to remove more than one item from the end of an array.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +58,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+Removes the first item from an array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+JS pop does not take any arguments. Ruby allows you pass an argument to remove more than one item from the beginning of an array.
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +75,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+The both add elements to the beginning of an array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+no visible difference from what I can see
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,7 +94,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map! {|x| x **2 }
 ```
 
 JavaScript:
@@ -101,7 +102,8 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+square = numbers.map(x => {
+   return x ** 2 })
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +116,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+
 ```
 
 JavaScript:
@@ -122,7 +124,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+
 ```
 
 ## Array#select vs. Array.protoype.filter()
