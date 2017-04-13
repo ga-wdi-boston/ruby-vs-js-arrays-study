@@ -128,7 +128,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+product = array.reduce(:*)
 ```
 
 JavaScript:
@@ -136,7 +136,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+const product = array.reduce(function(a, b){
+  return a * b
+})
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -149,7 +151,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+odd_num_array = array.select(&:odd?)
 ```
 
 JavaScript:
@@ -157,5 +159,8 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+const oddNumArray = array.filter(function(num){
+  if (num % 2 !== 0)
+  return num
+})
 ```
