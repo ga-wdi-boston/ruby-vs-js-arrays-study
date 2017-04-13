@@ -23,13 +23,18 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both the Ruby and JavaScript `push` methods adds one or more elements to the end
+of an array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+The JavaScript `push` method returns the new length of the array after it adds
+one or more elements to the end of an array.
+
+The Ruby `push` method returns the array itself after it adds one of more elements
+to the end of an array.
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +45,18 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both the Ruby and JavaScript `pop` methods remove the last element from an array
+and returns that element.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+The JavaScript `pop` method contains no parameters.
+
+The Ruby `pop` method can contain either no parameters or one `n` parameter.
+If a `n` parameter is given to the Ruby `pop` method, it returns an array of the
+last `n` elements or less.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +67,16 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both the Ruby and JavaScript `shift` methods remove the first element from an array
+and returns that element.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+The Ruby `shift` method can contain either no parameters or one `n` parameter.
+If a `n` parameter is given to the Ruby `shift` method, it returns an array of the
+first `n` elements or less (shifting all remaining elements down by one).
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +87,19 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both the Ruby and JavaScript `unshift` methods adds one or more elements to the
+beginning of an array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+The JavaScript `unshift` method returns the new length of the array after it adds
+one or more elements to the beginning of an array (moving other elements
+upwards).
+
+The Ruby `unshift` method returns the array itself after it adds one of more elements
+to the beginning of an array.
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,15 +112,17 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+squares_array = array.map { |num| num * num }
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// your answer here
+const squares_array = array.map(function (x) {
+  return x * x
+})
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,15 +135,17 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+product_array = array.reduce { |accumulator, element| accumulator * element }
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// your answer here
+const product_array = array.reduce(function (accumulator, element) {
+  return accumulator * element
+})
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,13 +158,13 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+oddarray = array.select { |num| num.odd? }
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// your answer here
+const oddarray = array.filter(number => number % 2 === 1)
 ```
