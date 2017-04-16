@@ -23,13 +23,14 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+adds elements to the end of an array
+
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+in ruby the array itself is returned, in js the length is returned
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +41,14 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+removes the last element from an array
+returns the removed element
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+ruby can 'pop' off multiple elements in the array
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +59,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+removes first element of an array and returns it
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+in ruby developers can specify which elements
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +76,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+adds defined elements to the beginning of the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+js returns legth of the array. ruby returns the array
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,15 +95,17 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map.with_index{ |x, i| x ** 2 }
 ```
 
 JavaScript:
 
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+squares = array.map(function(x){
+  return x**2
+})
 
-// your answer here
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +118,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.reduce(:*)
 ```
 
 JavaScript:
@@ -122,7 +126,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+let product = array.reduce(function(acc, val) {
+  return acc * val
+}, 1)
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +141,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+odd_array = array.select { |num|  num.odd?  }
 ```
 
 JavaScript:
@@ -143,5 +149,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+function findOdd(value) {
+  return value % 2 !== 0
+}
+
+var isOdd = array.filter(findOdd)
 ```
