@@ -23,13 +23,17 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+They both append something to end of an array. they both use the same syntax.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+push in ruby returns the array with new item appended to the end.
+push in js returns the length of the array with the appeneded item.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+https://ruby-doc.org/core-2.2.0/Array.html#method-i-push
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +44,17 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+They remove the last element from the array. They have the same name
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+in ruby pop can take an argument that specifies the number of items to remove
+from the end of the array.
+
+https://ruby-doc.org/core-2.2.0/Array.html#method-i-pop
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +65,17 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+Removes the first element of the array and returns it.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In ruby shift can take an argument specifying the number of elements to remove
+from the beginning of the array.
+
+https://ruby-doc.org/core-2.2.0/Array.html#method-i-shift
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +86,17 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+Adds an element to the beginning of an array. To the 0th index.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+unshift in js returns the new length of the array.
+unshift in ruby returns the new array.
+
+https://ruby-doc.org/core-2.2.0/Array.html#method-i-unshift
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,15 +109,16 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map { |number| number ** 2 }
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// your answer here
+array.map(number => number ** 2)
+
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,15 +131,17 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+array.reduce(:*)
+
 # your answer here
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// your answer here
+array.reduce((a, e) => n * e)
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,13 +154,14 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.select { |e| e.odd? }
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// your answer here
+array.filter(e => e % 2 !== 0)
+
 ```
