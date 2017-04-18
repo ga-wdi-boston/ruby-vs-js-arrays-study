@@ -23,13 +23,19 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+They are pretty similar, both allow for push to add an element to the end of an array.  Ruby requires less notation, you can write new_array.push "new thing" that will be added, but in javascript you have to write newArray.push("new thing").  The also both allow you to pass multiple thigns at once into .push(), like .push(1, 3, "shoes")
+
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+One of the best things about Ruby is there are a lot of ways to push new elements, including by using << which isn't available at all in js. In Ruby new_array << "new thing" << "more things"
+will add two new items to the array.
+
+You can also do new_array.push("thing").push("socks") in Ruby but not in js.
+
+In Ruby you can also use .push *other_array to append an array to another array without having to use .flatten, which you also cannot do in js.
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +46,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+They both allow you to use .pop to removed elements from the end of an array, but in Ruby it is .pop and in js it is .pop().
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In ruby you can pass a parameter to .pop(num) and return the number of element you want removed from the end of the array.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +63,14 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
-```
+For both you can use .shift to remove elements from an array from the start of the array.```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In ruby you can use new_array.shift(2) to remove multipe items from an array, like the first two elements.
+
+In js you can only use .shift() to remove one element at a time.
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,14 +81,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+You can use .unshift() in both ruby and js to add one element or multiple elements by doing array.unshift(1, 2, 3), to add as many things as you like, in order, to the start of an array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
-```
+I can't find anythign else interesting that seperates the two. ```
 
 ## Array#map vs. Array.prototype.map()
 
@@ -93,15 +99,15 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map! {|x| x**2}
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// your answer here
+const newArray = array.map(function(x) {return x*x})
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -113,16 +119,14 @@ Ruby:
 
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# your answer here
+array.reduce(1, :*)
 ```
 
 JavaScript:
 
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// your answer here
+newArray = array.reduce(function(acc, val){return acc*val})
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -134,14 +138,12 @@ Ruby:
 
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# your answer here
+array.select { |num| num.odd? }
 ```
 
 JavaScript:
 
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// your answer here
+.filter(function(num){return num%2 === 1})
 ```
