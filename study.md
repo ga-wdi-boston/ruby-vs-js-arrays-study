@@ -23,13 +23,16 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+In terms of function and syntax, the Ruby and JavaScript versions of `push` are
+virtually identical, adding the values of one or more parameters to the end of
+the original array. `[1, 2, 3].push(4, 5) => [1, 2, 3, 4, 5]` in both languages.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In JavaScript, `push` returns the length of the array with the new element
+added. In Ruby, `push` returns the whole array including the new element
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +43,17 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both languages, `pop()` removes the last element of an array and returns it.
+This reduces the length of the original array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+JavaScript returns `undefined` if the array is empty. Ruby returns `nil` if the
+array is empty. Ruby also allows a parameter to be passed: `array.pop(n)`. If
+`n` is given, `pop(n)` returns an array of the last n elements (or less). This
+is the same functionality as `array.slice!(-n, n)` in JavaScript.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +64,18 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both languages, `shift()` removes the first element from an array and
+returns that element, reducing the length of the array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby returns `nil` if the array is empty. JavaScript returns `undefined` if the
+array is empty.
+
+In Ruby, if a number `n` is given, `shift(n)` returns an array of the first n
+elements (or less). This is the same as `array.slice!(0, n)` in JavaScript.
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +86,15 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+In both languages, `unshift()` adds one or more elements to the beginning of an
+array.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In Ruby, `shift()` returns the updated array. In JavaScript, it returns the new
+length of the array.
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,15 +107,17 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map {|x| x ** 2 }
+# [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// your answer here
+array.map(x => x * x)
+//[ 1, 4, 9, 16, 25, 36, 49, 64, 81, 100 ]
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,15 +130,17 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.reduce(:*)
+# 3628800
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// your answer here
+array.reduce((a, c) => a * c)
+// 3628800
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,13 +153,15 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.select { |num|  num.odd?  }
+# [1, 3, 5, 7, 9]
 ```
 
 JavaScript:
 
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// your answer here
+array.filter(x => x % 2 === 1)
+// [ 1, 3, 5, 7, 9 ]
 ```
