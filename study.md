@@ -23,13 +23,15 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+They are both the same.
+array.push()
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In ruby you can use the short hand like:
+array << "content"
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +42,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+They both remove the last element of an array. Written the same way.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+In Ruby, Array#pop won't return anything. In Javascript it is going to return the element that was removed.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
