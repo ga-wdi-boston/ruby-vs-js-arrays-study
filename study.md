@@ -23,13 +23,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+puts one or more elements onto the end of an array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+ruby returns the array and javascript returns the new length of the array
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +40,13 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+removes the last element from an array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+ruby's pop can take an argument that indicates how many elements to remove
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +57,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+removes the first element from the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+ruby's shift can take an argument that indicates how many elements to remove
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +74,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+adds one or more element to the beginning of an array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+javascript returns the new length of the array; ruby returns the array
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,7 +93,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map { |i| i ** 2 }
 ```
 
 JavaScript:
@@ -101,7 +101,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+array.map(n => n ** 2)
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +114,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.reduce { |p,c| p * c}
 ```
 
 JavaScript:
@@ -122,7 +122,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+array.reduce((p,c) => p * c)
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +135,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.select {|i| i % 2 == 1}
 ```
 
 JavaScript:
@@ -143,5 +143,5 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+array.filter(n => n % 2 === 1)
 ```
