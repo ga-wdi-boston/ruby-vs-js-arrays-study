@@ -23,13 +23,25 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+You can use the same dot notation to push an element to the end of an array.
+
+JS Example:
+var fruits = ["Banana", "Apple", "Orange"];
+fruits.push("Mango")
+
+Ruby Example:
+fruits = ["Banana", "Apple", "Orange"]
+fruits.push("Mango")
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby offers another way, with no parenthesis:
+
+Example:
+fruits = ["Banana", "Apple", "Orange"]
+fruits.push "Mango"
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +52,26 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+'pop' methods removes the element at the end of an array, in both JS and Ruby.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby does not require parenthesis to remove the last element of an array, but
+can also take in an argument (n) using parenthesis to return an array of the
+last n elements.
+
+Javascript's 'pop' method does not accept arguments.
+
+JS Example:
+var fruits = ["Banana", "Apple", "Orange"];
+fruits.pop()
+
+Ruby Example:
+fruits = ["Banana", "Apple", "Orange"]
+fruits.pop
+fruits.pop(2)
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +82,18 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+'shift' method removes the element at the beginning of an array, in both JS
+and Ruby.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby does not require parenthesis to remove the last element of an array, but
+can also take in an argument (n) using parenthesis to return an array of the
+first n elements.
+
+Javascript's 'shift' method does not accept arguments.
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +104,17 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+'unshift' method adds element(s) at the beginning of an array, in both JS
+and Ruby.
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+No difference in the modified array, but the returns are different.
+Javascript returns the length of the array, wherease Ruby returns the modified
+array.
+
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,7 +127,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+new_array = array.map { |number| number ** 2}
 ```
 
 JavaScript:
@@ -101,7 +135,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+const newArray = array.map(function(number) {
+  return number ** 2;
+})
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -114,7 +150,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+new_array = array.reduce(1) { |accumulator, number| accumulator * number }
 ```
 
 JavaScript:
@@ -122,7 +158,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+product = array.reduce(function(accumulator, number) {
+  return accumulator * number;
+}, 1)
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +173,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+new_array = array.select { |number| number.odd? }
 ```
 
 JavaScript:
@@ -143,5 +181,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+newArray = array.filter(function(number) {
+  return (number % 2 !== 0)
+})
 ```
