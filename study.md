@@ -24,12 +24,15 @@ Similarities:
 
 ```md
 <!-- your answer here -->
+The method can be used to insert a value to both languages.
 ```
 
 Differences:
 
 ```md
 <!-- your answer here -->
+In ruby, we can also use "<<" instead of .push to push a value. The method is also not limited to one value, and
+can be increased using multiple "<<" or some kind of operator
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -41,12 +44,15 @@ Similarities:
 
 ```md
 <!-- your answer here -->
+both will delete the last item/value in the array
 ```
 
 Differences:
 
 ```md
 <!-- your answer here -->
+JS will only remove one item at the end while Ruby doesn't have such limitations; we can pass
+in some kind of parameter to state how many we want to remove, or explicitly state what we want to remove.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -58,12 +64,14 @@ Similarities:
 
 ```md
 <!-- your answer here -->
+both will remove the first item from the array
 ```
 
 Differences:
 
 ```md
 <!-- your answer here -->
+similar to differences in pop()
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -75,12 +83,15 @@ Similarities:
 
 ```md
 <!-- your answer here -->
+both will add the something to the beginning of the array, and can take as many arguments
+as desired
 ```
 
 Differences:
 
 ```md
 <!-- your answer here -->
+not sure about this one
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -94,6 +105,7 @@ Ruby:
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # your answer here
+new_array = array.map { |num| num**2 }
 ```
 
 JavaScript:
@@ -102,6 +114,9 @@ JavaScript:
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // your answer here
+const newArray = array.map(function(num){
+  num * num
+})
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -115,6 +130,7 @@ Ruby:
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # your answer here
+new_array = (1..10).reduce(:+)
 ```
 
 JavaScript:
@@ -123,6 +139,9 @@ JavaScript:
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // your answer here
+array.reduce(function(acc, val){
+  return acc + val
+})
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -136,12 +155,17 @@ Ruby:
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # your answer here
+array.select { |num| num.odd? }
 ```
 
 JavaScript:
-
+not sure if I did this right
 ```javascript
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const oddNum = array.filter(function(array){
+  for (let i = 0; i < array.length; i++) {
+    return array[i] % 2 !== 1
+  }
+})
 // your answer here
 ```
