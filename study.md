@@ -23,13 +23,14 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+the shovel operator acts like the java push method both add at the end of the
+array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+ruby can chain push while js can't
 ```
 
 ## Array#pop vs. Array.prototype.pop()
@@ -40,13 +41,14 @@ Array methods?
 Similarities:
 
 ```md
-<!-- your answer here -->
+they both removed the last thing in the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby if a number n is given, returns an array of the last n elements (or less)
+just like array.slice.
 ```
 
 ## Array#shift vs. Array.prototype.shift()
@@ -57,13 +59,14 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both remove elements from the front of the array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+ruby number n is given, returns an array of the first n elements again like
+the array.slice
 ```
 
 ## Array#unshift vs. Array.prototype.unshift()
@@ -74,13 +77,13 @@ What are the similarities and differences between Ruby's and JavaScript's
 Similarities:
 
 ```md
-<!-- your answer here -->
+Both adds one or more elements to the beginning of an array
 ```
 
 Differences:
 
 ```md
-<!-- your answer here -->
+Ruby can add more then one to the front of the array
 ```
 
 ## Array#map vs. Array.prototype.map()
@@ -93,7 +96,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.map{ |number| number * number}
 ```
 
 JavaScript:
@@ -101,7 +104,9 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+let squares = array.map(function () {
+return number * number
+})
 ```
 
 ## Array#reduce vs. Array.prototype.reduce()
@@ -113,16 +118,17 @@ Ruby:
 
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# your answer here
+array.reduce(1, :*)
 ```
 
 JavaScript:
 
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// your answer here
+let product = function () {
+  return number * a
+}
+array.reduce()
 ```
 
 ## Array#select vs. Array.protoype.filter()
@@ -135,7 +141,7 @@ Ruby:
 ```ruby
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# your answer here
+array.select{|number| number%2 === 0}
 ```
 
 JavaScript:
@@ -143,5 +149,7 @@ JavaScript:
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// your answer here
+let odds = array.filter(function(num){
+  return num%2 === 0
+})
 ```
